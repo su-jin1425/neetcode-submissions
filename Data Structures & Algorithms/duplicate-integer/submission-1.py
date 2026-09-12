@@ -1,0 +1,12 @@
+class Solution:
+    def hasDuplicate(self, nums: List[int]) -> bool:
+        # Solution HashSet T : O(n) S : O(n)
+        if not nums:
+            return False
+        seen=set()
+        for i in nums:
+            if i in seen:
+                return True
+            seen.add(i)
+        return False
+        
